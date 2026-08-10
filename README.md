@@ -115,7 +115,7 @@ GEMINI_API_KEY=your_key_here
 ## Known issues
 
 - **Free-tier Gemini quota:** the free tier allows **~20 generate-content requests/day per model**. The error `429 RESOURCE_EXHAUSTED` means you've hit today's cap — it resets at midnight Pacific. Each model has its own bucket, so switching `MODEL_NAME` (e.g. to a different Gemini variant) gives a fresh 20. The ingestion/retrieval stages (embeddings + ChromaDB) run entirely locally and are not subject to this.
-- **Notebook instantiation bug:** in the current notebook, the line `vectordatabase = VectorDatabase()` is indented inside the `add_documents` method, so it never runs at module level — calling `vectordatabase.add_documents(...)` raises `NameError`. The vector store on disk is already populated (162 chunks), so instantiate it at the top level to continue:
+
 
   ```python
   vectordatabase = VectorDatabase()
