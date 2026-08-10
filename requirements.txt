@@ -1,0 +1,10 @@
+langchain-core
+langchain-community
+langchain
+pypdf
+pymupdf
+chromadb
+sentence-transformers
+langchain-google-genai
+python-dotenv
+scikit-learn
