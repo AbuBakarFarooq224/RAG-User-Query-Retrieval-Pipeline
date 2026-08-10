@@ -116,11 +116,6 @@ GEMINI_API_KEY=your_key_here
 
 - **Free-tier Gemini quota:** the free tier allows **~20 generate-content requests/day per model**. The error `429 RESOURCE_EXHAUSTED` means you've hit today's cap — it resets at midnight Pacific. Each model has its own bucket, so switching `MODEL_NAME` (e.g. to a different Gemini variant) gives a fresh 20. The ingestion/retrieval stages (embeddings + ChromaDB) run entirely locally and are not subject to this.
 
-
-  ```python
-  vectordatabase = VectorDatabase()
-  ```
-
 ## Notes
 
 - The embeddings and retrieval stages never leave your machine — only the final generation step calls the Gemini API.
