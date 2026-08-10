@@ -1,4 +1,4 @@
-# RAG Pipeline
+# RAG Pipeline 
 
 A retrieval-augmented generation (RAG) pipeline that lets you ask natural-language questions over your own documents — currently PDFs (CVs, cover letters, thesis) and plain-text files. Built as a step-by-step Jupyter notebook (`notebook/RAG_Pipeline.ipynb`), with LangChain, sentence-transformers, ChromaDB, and Google Gemini.
 
